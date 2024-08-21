@@ -1,0 +1,863 @@
+@import url(font.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    font-size: 14px;
+    color: #666666;
+}
+
+body.active {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.link-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.subtitle {
+    font-style: italic;
+    line-height: 18px;
+}
+
+.adapt-pic {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* === header start === */
+.header__top {
+    background: #000;
+    padding: 34px 0;
+}
+
+.header img {
+    vertical-align: top;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.burger-menu {
+    width: 25px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
+.burger-menu span {
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: .3s;
+}
+
+.burger-menu::after,
+.burger-menu::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: .3s;
+}
+
+.burger-menu.active span {
+    transform: scale(0);
+}
+
+.burger-menu.active::after {
+    top: 50%;
+    transform: rotate(45deg) translateY(-50%);
+}
+.burger-menu.active::before {
+    bottom: 50%;
+    transform: rotate(-45deg) translateY(50%);
+}
+
+.burger-menu::after {
+    top: 0;
+}
+
+.burger-menu::before {
+    bottom: 0;
+}
+
+.burger-menu.active {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    z-index: 1000;
+}
+
+
+.nav__list {
+    display: flex;
+    gap: 37px;
+}
+
+.nav__link {
+    line-height: 18px;
+    color: #FFFFFF;
+    transition: .3s;
+}
+
+.header__search-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* === header end === */
+
+
+/* === intro start === */
+.intro {
+    padding: 30px 0 40px;
+}
+
+.intro .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: nowrap;
+}
+
+.intro__inner {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 265px 265px;
+    grid-auto-rows: 265px;
+    gap: 30px;
+}
+
+.intro__card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.intro__card:first-child {
+    grid-row: 1/-1;
+}
+
+.category-veh::before {
+    content: 'Vehicle';
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    display: block;
+    padding: 4px 12px 2px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+    background: #4A90E2;
+    z-index: 3;
+    border-radius: 3px;
+}
+
+.intro__left-card-pic,
+.intro__right-card-pic {
+    max-width: 370px;
+    transition: .3s;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+.intro__card-suptitle {
+    line-height: 18px;
+    color: #FFFFFF;
+    margin-bottom: 6px;
+}
+
+.intro__left-card-info {
+    position: absolute;
+    left: 20px;
+    bottom: 23px;
+}
+
+.intro__left-card-title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 36px;
+    color: #FFFFFF;
+    padding-right: 5px;
+}
+
+.intro__right-card-info {
+    position: absolute;
+    left: 20px;
+    bottom: 30px;
+}
+
+.intro__right-card-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+    padding-right: 5px;
+}
+
+/* === intro end === */
+
+.content-wrapper {
+    padding: 40px 0;
+}
+
+.content-wrapper .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* === main-content start === */
+.main__content {
+    max-width: 770px;
+    margin-right: 10px;
+}
+
+.main-content__article {
+    position: relative;
+    margin-bottom: 180px;
+    max-width: 770px;
+}
+
+.main-content__article:nth-child(5) {
+    margin-bottom: 200px;
+}
+
+.main-content__article-info {
+    padding: 30px 100px 30px 30px;
+    margin-top: 125px;
+    max-width: 730px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: -125px;
+}
+
+.main-content__article-info::before {
+    content: 'Vehicle';
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    max-width: 62px;
+    padding: 4px 0 2px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+    background: #4A90E2;
+    z-index: 3;
+    border-radius: 3px;
+}
+
+.main-content__article-title {
+    margin-bottom: 15px;
+}
+
+.main-content__article-link {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 28px;
+    color: #171717;
+    transition: .3s;
+}
+
+.main-content__article-subtitle {
+    margin-bottom: 14px;
+}
+
+.main-content__article-text {
+    line-height: 24px;
+}
+
+/* pages start */
+
+.main-content__pages-list {
+    display: flex;
+    gap: 10px;
+}
+
+.main-content__pages-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #E5E5E5;
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 16px;
+    color: #171717;
+    transition: .3s;
+}
+
+.main-content__pages-link_active {
+    background: rgb(148, 147, 147);
+}
+
+/* pages end */
+
+/* === main-content end === */
+
+
+
+/* === sidebar start === */
+.sidebar {
+    max-width: 270px;
+    margin-left: 20px;
+}
+
+/* === random post start === */
+.random-post {
+    margin-bottom: 60px;
+}
+
+.random-post__img {
+    max-width: 270px;
+    margin-bottom: 20px;
+}
+
+.random-post__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #171717;
+    margin-bottom: 8px;
+}
+
+.random-post__subtitle {
+    color: #999999;
+    margin-bottom: 14px;
+}
+
+.random-post__text {
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 21px;
+}
+
+.random-post__link-btn {
+    font-weight: 700;
+    line-height: 18px;
+    color: #FFFFFF;
+    display: block;
+    padding: 17px 0 15px;
+    background: #232323;
+    border-radius: 5px;
+    max-width: 270px;
+    text-align: center;
+    transition: .3s;
+}
+
+/* === random post end === */
+
+/* === popular posts start === */
+.popular {
+    margin-bottom: 60px;
+}
+
+.popular__item {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.popular__item:last-child {
+    margin: 0;
+}
+
+.popular__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #171717;
+    margin-bottom: 23px;
+}
+
+.popular__item-img {
+    border-radius: 5px;
+    max-width: 270px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.popular__item-pic {
+    transition: .3s;
+}
+
+.popular__item .category-veh::before {
+    top: 20px;
+    left: 20px;
+}
+
+.popular__item-title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: #171717;
+    transition: .3s;
+}
+
+/* === popular posts end === */
+
+/* === instagram start === */
+.instagram {
+    margin-bottom: 60px;
+}
+
+.instagram__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #171717;
+    margin-bottom: 25px;
+}
+
+.instagram__photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.instagram__photos-img {
+    width: 130px;
+    height: 130px;
+    position: relative;
+}
+
+.instagram__photos-img::after {
+    content: '';
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/intagram/svg/inst-icon.svg'), rgba(0, 0, 0, 0.7);
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: center;
+    opacity: 0;
+    transition: .4s;
+}
+
+.instagram__photos-pic {
+    height: 100%;
+    object-fit: cover;
+}
+
+.instagram__link-btn {
+    display: block;
+    max-width: 100%;
+    font-weight: 700;
+    line-height: 18px;
+    color: #FFFFFF;
+    background: #232323;
+    border-radius: 3px;
+    padding: 17px 0 15px;
+    text-align: center;
+    transition: .3s;
+}
+
+.instagram__link-btn span {
+    display: inline-block;
+    padding-left: 26px;
+    background: url('../img/intagram/svg/inst-icon.svg') no-repeat left center;
+}
+
+/* === instagram end === */
+
+/* === tags start === */
+.tags {
+    margin-bottom: 60px;
+}
+
+.tags__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #171717;
+    margin-bottom: 26px;
+}
+
+.tags__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tags__list-link {
+    display: block;
+    padding: 7px 16px 5px;
+    background: #EBEBEB;
+    border-radius: 3px;
+    line-height: 18px;
+    color: #171717;
+    transition: .3s;
+}
+
+/* === tags end === */
+
+/* === email start === */
+.email__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #171717;
+    margin-bottom: 11px;
+}
+
+.email__subtitle {
+    line-height: 24px;
+    margin-bottom: 27px;
+}
+
+.email__container {
+    border: none;
+}
+
+.email__form-field,
+.email__form-submit {
+    width: 100%;
+}
+
+.email__form-field {
+    padding: 17px 15px 15px;
+    border: 1px solid #E5E5E5;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    font-family: 'PT Sans';
+    font-weight: 400;
+    font-size: 14px;
+    color: #666666;
+}
+
+.email__form-field::placeholder {
+    line-height: 18px;
+    color: #AEB3BB;
+}
+
+.email__form-field:focus {
+    outline: 1px solid #777;
+}
+
+.email__form-submit {
+    font-weight: 700;
+    line-height: 18px;
+    color: #FFFFFF;
+    background: #232323;
+    border-radius: 3px;
+    padding: 17px 0 15px;
+    border: none;
+    transition: .3s;
+    cursor: pointer;
+}
+
+/* === email end === */
+
+/* === sidebar end === */
+
+/* === most popular start === */
+.most-popular {
+    padding: 40px 0 80px;
+}
+
+.most-popular__block-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.most-popular__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 39px;
+    color: #171717;
+    margin-bottom: 27px;
+}
+
+.most-popular__item {
+    max-width: 270px;
+    margin-left: 10px;
+    position: relative;
+}
+
+.category-bmw::before {
+    content: 'BMW';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: block;
+    padding: 4px 12px 2px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+    background: #4A90E2;
+    z-index: 3;
+    border-radius: 3px;
+}
+
+.most-popular__item-img {
+    border-radius: 5px;
+}
+
+.most-popular__item-pic {
+    transition: .3s;
+}
+
+.most-popular__item:first-child {
+    margin-left: 0;
+}
+
+.most-popular__item-img {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.most-popular__item-title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: #171717;
+    transition: .3s;
+}
+
+/* === most popular end === */
+
+.footer-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+
+/* === footer top start === */
+
+/* footer left start */
+.footer-top {
+    padding: 62px 0 50px;
+    background: #171717;
+}
+
+.footer-top .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-top__left,
+.footer-top__right {
+    max-width: 270px;
+    width: 100%;
+}
+
+.footer-top__center {
+    width: 100%;
+    max-width: 293px;
+}
+
+.footer-top__logo {
+    margin-bottom: 28px;
+}
+
+.footer-top__logo img {
+    vertical-align: top;
+}
+
+.footer-top__left-text {
+    line-height: 22px;
+    color: #CECECE;
+    margin-bottom: 64px;
+}
+
+.footer-top__socials-title {
+    margin-bottom: 23px;
+}
+
+.footer-top__socials-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-top__socials-link {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #373737;
+    border-radius: 3px;
+}
+
+/* footer left end */
+
+/* footer center start */
+.footer-top__center-title {
+    margin-bottom: 28px;
+}
+
+.footer-top__center-item {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.footer-top__center-item-img {
+    width: 95px;
+    height: 95px
+}
+
+.footer-top__center-item-pic {
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer-top__center-item-info {
+    max-width: 178px;
+    ;
+}
+
+.footer-top__center-item-title {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 26px;
+    color: #FFFFFF;
+    margin-bottom: 13px;
+    transition: .3s;
+}
+
+.footer-top__center-item-subtitle {
+    line-height: 14px;
+    color: #CECECE;
+}
+
+/* footer center end */
+
+/* footer right start */
+.footer-top__right-title {
+    margin-bottom: 38px;
+}
+
+.email__form-field_footer {
+    background: #373737;
+    border: none;
+    color: #fff
+}
+
+/* footer right start */
+
+/* === footer top end === */
+
+/* footer bottom start */
+.footer-bottom {
+    background: #000000;
+    padding: 39px 0 37px;
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom-copy {
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+/* footer bottom end */
+
+@media (hover: hover) {
+    .nav__link:hover {
+        opacity: .65;
+    }
+    .intro__card:hover img {
+        transform: scale(1.05);
+    }
+    .main-content__article-link:hover {
+        color: #5c5858;
+    }
+    .main-content__pages-link:hover {
+        background: #171717;
+        color: #fff;
+    }
+    .random-post__link-btn:hover {
+        background: #5c5858;
+    }
+    .popular__item:hover h3 {
+        color: #5c5858;
+    }
+    .popular__item:hover img {
+        transform: scale(1.05);
+    }
+    .instagram__photos-img:hover::after {
+        opacity: 1;
+    }
+    .instagram__link-btn:hover {
+        background: #5c5858;
+    }
+    .tags__list-link:hover {
+        background: #a7a5a5;
+    }
+    .email__form-submit:hover {
+        background: #5c5858;
+    }
+    .most-popular__item:hover img {
+        transform: scale(1.05);
+    }
+    .most-popular__item:hover h3 {
+        color: #5c5858;
+    }
+    .footer-top__center-item:hover h3 {
+        opacity: .5;
+    }
+}

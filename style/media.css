@@ -1,0 +1,197 @@
+.media {
+    display: none;
+}
+@media (max-width: 992px) {
+    .content-wrapper .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .main-content__article {
+        margin: 0 auto 180px;
+    }
+    .sidebar {
+        margin-left: 0px;
+        max-width: unset;
+    }
+    .random-post {
+        text-align: center;
+    }
+    .random-post__img {
+        margin: 0 auto;
+    }
+    .random-post__link-btn {
+        margin: 0 auto;
+    }
+    .popular__block-items {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+    }
+    .popular__item {
+        text-align: center;
+    }
+    .popular__item-img {
+        margin: 0 auto 20px;
+    }
+    .instagram__photos {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }    
+    .instagram__photos-img {
+        width: unset;
+    }
+    .footer-top .container {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+
+}
+@media (max-width: 768px) {
+    .intro__inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .popular__block-items {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .popular__item {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .instagram__photos {
+        grid-template-columns: repeat(3, 1fr);
+    } 
+    .most-popular__block-items {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .most-popular__item {
+        margin-left: 0;
+        max-width: unset;
+        width: calc(50% - 15px);
+    }
+    .footer-top .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-top__left,
+    .footer-top__center,
+    .footer-top__right {
+        max-width: unset;
+        width: 80%;
+    }
+    .footer-top__socials-list {
+        justify-content: flex-start;
+        gap: 20px;
+    }
+    .footer-top__center-item {
+        justify-content: flex-start;
+        gap: 20px;
+    }
+    .footer-bottom .container {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+    .footer-bottom-info {
+        order: 1;
+    }
+    .footer-bottom .nav {
+        order: 2;
+    }
+    .footer-bottom .nav__list {
+        gap: 15px;
+    }
+}
+@media (max-width: 576px) {
+    .intro__left-card-title,
+    .intro__right-card-title {
+        font-size: 18px;
+    }
+    .main-content__article-info {
+        padding: 20px;
+    }
+    .main-content__article-link {
+        font-size: 18px;
+    }  
+    .main-content__article-text {
+        font-size: 12px;
+    }
+    .popular__block-items {
+        flex-direction: column;
+        align-items: center;
+    }
+    .popular__item {
+        width: 70%;
+    }
+    .burger-menu {
+        display: block;
+    }
+    .header__top .nav__list {
+        display: flex;
+        transition: .3s;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 110%;
+        right: 0;
+        height: 100%;
+        background: rgba(21, 21, 21, 0.9);
+        backdrop-filter: blur(8px);
+        z-index: 999;
+    }
+
+    .header__top .nav__list.active {
+        left: 0;
+    }
+}
+@media (max-width: 480px) {
+    .intro__inner {
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 200px;
+        grid-auto-rows: 200px;
+        justify-items: center;
+    }
+    .intro__card {
+        max-width: 350px;
+        width: 100%;
+    }
+    .main-content__article {
+        margin: 0 auto 240px;
+    }
+    .main-content__article-info {
+        bottom: -180px;
+        left: 5px;
+        right: 5px;
+    }
+    .main-content__pages-link {
+        width: 30px;
+        height: 30px;
+    }
+    .popular__item {
+        width: 90%;
+    }
+    .most-popular__block-items {
+        flex-direction: column;
+        align-items: center;
+    }
+    .most-popular__item {
+        width: 80%;
+    }
+    .footer-top__left,
+    .footer-top__center,
+    .footer-top__right {
+        width: 100%;
+    }
+}
+
+@media (hover: hover) {
+    .nav__link:hover {
+        opacity: .65;
+    }
+}
